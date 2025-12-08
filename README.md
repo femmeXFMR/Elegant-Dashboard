@@ -3,21 +3,21 @@
 ![Screenshot_20251208_223111_Fully Kiosk Browser](https://github.com/user-attachments/assets/0ee04375-9042-4334-9e10-87b6ade4f304)
 
 
-> **This is a highly user-specific Home Assistant dashboard.**  
-> The YAML in this repository will _not_ function out-of-the-box on other systems due to unique helpers, sensors, custom logic, and tailored UI behaviour.  
->
-> Instead, **use this repo as a guide** to learn and adopt:
-> - Styling techniques  
-> - Advanced card constructions  
-> - Animation & transitions  
-> - Browser_mod pop-up flows  
-> - Glassmorphism design  
-> - Room summary logic  
-> - Presence mapping  
-> - Quickfire controls  
-> - Weather, media, and automation UI patterns  
->
-> This repository is best viewed as a **concept library** that demonstrates how the Abode dashboard was built so you can replicate the _patterns_, not the exact implementation.
+**This is a highly user-specific Home Assistant dashboard.**  
+The YAML in this repository will _not_ function out-of-the-box on other systems due to unique helpers, sensors, custom logic, and tailored UI behaviour.  
+
+Instead, **use this repo as a guide** to learn and adopt:
+- Styling techniques  
+- Advanced card constructions  
+- Animation & transitions  
+- Browser_mod pop-up flows  
+- Glassmorphism design  
+- Room summary logic  
+- Presence mapping  
+- Quickfire controls  
+- Weather, media, and automation UI patterns  
+
+This repository is best viewed as a **concept library** that demonstrates how the Abode dashboard was built so you can replicate the _patterns_, not the exact implementation.
 
 ---
 
