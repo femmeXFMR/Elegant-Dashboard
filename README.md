@@ -113,7 +113,7 @@ You’ll need equivalents adapted to your setup.
 
 ## 📦 What’s Included in the Abode Dashboard?
 
-(Continue your README sections here…)
+
 
 
 ### CLOCK WEATHER CARD
