@@ -91,3 +91,66 @@ To use this:
 - The 5-day forecast bars compute per-day min/max temperature and precipitation probability by aggregating the raw hourly timeline (no template sensors needed).
 - The rain bar uses a glassmorphic gradient with a small 💧 icon and percentage label, and animates in a short time after page load.
 - The 12-hour chart is an inline SVG rendered inside a `custom:button-card` using the first 12 entries of `sensor.tomorrow_raw_hourly.attributes.timelines.hourly`.
+
+
+
+### energy_summary_card.yaml
+
+**Purpose**
+
+A glassmorphic energy summary card showing:
+
+- Electricity and Gas daily spend (from Bright / Hildebrand Glow integration).
+- A horizontal-pill layout with animated pulses (blue for electricity, orange for gas).
+- A smooth 24-hour mini-graph of cost trends (using `mini-graph-card`).
+- Beautiful gradient background, rounded edges, and subtle drop-shadows.
+
+---
+
+**Required custom cards / plugins**
+
+Install via HACS:
+
+- `custom:stack-in-card`
+- `custom:button-card`
+- `custom:mini-graph-card`
+- `card-mod`
+
+---
+
+**Required entities**
+
+Electricity + gas cost sensors:
+- `sensor.electricity` — *Displays the current electricity cost*  
+- `sensor.gas` — *Displays the current gas cost*  
+- `sensor.electricity_cost_today` — *Used for the 24h electricity graph*  
+- `sensor.gas_cost_today` — *Used for the 24h gas graph*
+
+> These typically come from the **Bright / Hildebrand Glow DCC** integration.
+
+---
+
+**Visual behaviour**
+
+- The two pill-style header buttons show:
+  - ⚡ Electricity price with blue theme
+  - 🔥 Gas price with orange theme
+- The bottom section displays a **mini-graph-card** line chart only when cost sensors are not `unknown`.
+- Includes delayed animation for the graph path (smooth, glowing line).
+
+---
+
+**How to adapt for your setup**
+
+- Replace the following entities with yours if named differently:
+  - `sensor.electricity`
+  - `sensor.gas`
+  - `sensor.electricity_cost_today`
+  - `sensor.gas_cost_today`
+- Change colors by adjusting:
+  - `#47C1E8` for electricity  
+  - `#ffaa00` for gas
+- You can remove the pulse animations if not needed by deleting the `@keyframes` blocks.
+- Background gradient can be customised in:
+  ```yaml
+  background: linear-gradient(135deg, rgba(151, 87, 167, 0.25), rgba(75, 124, 132, 0.25));
