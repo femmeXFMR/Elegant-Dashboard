@@ -1,4 +1,4 @@
-### home_header_welcome_weather.yaml
+### CLOCK WEATHER CARD
 
 **Purpose**
 
@@ -94,7 +94,7 @@ To use this:
 
 
 
-### energy_summary_card.yaml
+### ENERGY CARD
 
 **Purpose**
 
