@@ -165,6 +165,7 @@ Electricity + gas cost sensors:
 ---
 
 ### MEDIA CENTRE CARD
+
 <img width="562" height="285" alt="image" src="https://github.com/user-attachments/assets/a31254cf-d2b3-4913-9197-4897d4ca8374" />
 
 **Purpose**
@@ -226,6 +227,7 @@ Replace these with your own media_player entities if different.
 ---
 
 **2. Announcement system (popup 1 – 📢)**
+
 <img width="709" height="868" alt="image" src="https://github.com/user-attachments/assets/f73d34f5-5a3f-4ec7-930e-a06ade8274c2" />
 
 Helpers:
@@ -285,6 +287,7 @@ Features:
 ---
 
 **4. Drop-In Intercom (popup 3 – 📞)**
+
 <img width="709" height="783" alt="image" src="https://github.com/user-attachments/assets/33002b3c-57a2-4360-a542-69d91ece0b6a" />
 
 Helpers:
@@ -304,6 +307,7 @@ UI:
 ---
 
 **5. Alexa Alarms / Timers / Reminders (popup 4 – ⏰)**
+
 <img width="709" height="616" alt="image" src="https://github.com/user-attachments/assets/fa358e0a-b0ee-4f13-8c80-9ef20467525f" />
 
 Tab selector:
