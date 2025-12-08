@@ -1,4 +1,4 @@
-### CLOCK WEATHER CARD
+#### CLOCK WEATHER CARD
 
 **Purpose**
 
@@ -95,7 +95,7 @@ To use this:
 ---
 ---
 
-### ENERGY CARD
+#### ENERGY CARD
 
 **Purpose**
 
@@ -159,7 +159,7 @@ Electricity + gas cost sensors:
 ---
 ---
 
-### MEDIA CENTRE CARD
+#### MEDIA CENTRE CARD
 
 **Purpose**
 
@@ -378,7 +378,7 @@ Behaviour:
 ---
 ---
 
-### ROOM CARDS
+#### ROOM CARDS
 
 This file defines the complete set of glassmorphic **room summary cards** used across the home dashboard.  
 They provide presence, temperature, automation, lighting, fans, blind controls, and door-state indicators.
