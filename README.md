@@ -31,13 +31,14 @@ Instead:
 
 Each folder contains a self-contained part of the UI:
 
-- **Room Cards** — glassmorphic room tiles with presence, lights, climate, blinds  
-- **Surveillance** — live camera streams & motion states  
-- **Quickfire Controls** — lights, climate, blinds, automations  
-- **Media Station** — speaker groups, requests, transfers  
-- **Housekeeping** — robot vacuums & mower control  
-- **Weather Dashboard** — animated icons, sunrise/sunset arc, forecasts  
-- **Sidebar** — expandable/collapsible navigation drawer  
+- **Weather Dashboard** — animated icons, sunrise/sunset arc, forecasts
+- **Energy Card** - based on Hildebrand integration
+- **Media Station** — speaker groups, requests, transfers 
+- **Room Cards** — glassmorphic room tiles with presence, lights, climate, blinds
+- **Location Card** - Based on a sleek combination of iOS shortcuts and webhooks (will post a separate guide on this in due course as currently only YAML behind the card is included)
+- **Surveillance Surveillance ** — live camera streams & motion states
+- **Housekeepers Card** — robot vacuums & mower control    
+- **Quickfire Controls** — lights, climate, blinds, automations
 - **Scripts & Helpers** — logic powering UI behaviour  
 
 Use these as references to understand layout, structure, and design patterns.
@@ -111,9 +112,22 @@ You’ll need equivalents adapted to your setup.
 
 ---
 
+## 📜 License
+
+This project is shared for learning and inspiration, not as a turnkey package.
+You are free to copy styling techniques, animations, UI behaviour, and card structures.
+
+Please do not repackage or redistribute the entire configuration as your own.
+
+## ❤️ A Note from the Author
+
+This dashboard has been built over hundreds of hours of iteration —
+tuning animations, refining behaviour, and making every interaction feel smooth.
+
+If you find ideas here useful, feel free to ⭐ star the repo or share screenshots of what you build.
+
+
 ## 📦 What’s Included in the Abode Dashboard?
-
-
 
 
 ### CLOCK WEATHER CARD
