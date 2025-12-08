@@ -650,6 +650,9 @@ They provide presence, temperature, automation, lighting, fans, blind controls, 
 
 ### LOCATION, TRAVEL PROGRESS & SECURITY CARD 
 
+<img width="562" height="221" alt="image" src="https://github.com/user-attachments/assets/c03e8f50-c6b2-40b8-9ca2-601fb19044f3" />
+
+
 This file defines a glassmorphic **Location & Security strip** that shows:
 
 - Two animated **presence / travel cards**:
@@ -868,6 +871,8 @@ Make sure these are installed (typically via HACS) and added to your Lovelace `r
 
 ### HOUSEKEEPERS CARD
 
+<img width="570" height="249" alt="image" src="https://github.com/user-attachments/assets/76938e90-b917-4cd2-9823-b526d186bde6" />
+
 This card defines a glassmorphic **“House Keepers”** panel for three robots (e.g. lawn mower + two vacuums). It shows:
 
 - A **title row**:
@@ -985,6 +990,8 @@ Make sure the custom cards are installed (often via HACS) and added to your Love
 
 ### QUICKFIRE CARD
 
+<img width="570" height="146" alt="image" src="https://github.com/user-attachments/assets/4f1a2e80-7060-4c73-9ee9-9d9b996aea6a" />
+
 The **Quickfire** card is a glassmorphic control panel that gives you **fast access** to three common “whole-house” actions:
 
 - **Lights** – snapshot and control all active lights with a smart “restore / replace” flow.
@@ -1037,6 +1044,8 @@ Inside it, a **`vertical-stack`** contains:
 Button 1 – Lights
 -----------------
 
+<img width="547" height="291" alt="image" src="https://github.com/user-attachments/assets/00b428bd-f02a-44b4-a290-cedee47b4392" />
+
 ### Purpose
 
 - Shows a count of **currently-on lights** (`sensor.on_lights_count`).
@@ -1085,6 +1094,8 @@ The main grid button also:
 Button 2 – Heat
 ---------------
 
+<img width="1223" height="627" alt="image" src="https://github.com/user-attachments/assets/4c97c648-09fa-4d0d-a7b2-687ee8cd006b" />
+
 ### Purpose
 
 - Shows a small thermostat icon and **house-average temperature** (`sensor.house_temperature_weighted`).
@@ -1130,6 +1141,8 @@ Additional climate entities referenced in the icon logic (for “any heating on?
 Button 3 – Blinds
 -----------------
 
+<img width="454" height="627" alt="image" src="https://github.com/user-attachments/assets/9fd4a847-5011-4a82-b559-99335e6e76a0" />
+
 ### Purpose
 
 - Shows a blinds icon and the **last command** sent to the lounge blinds.
@@ -1169,6 +1182,8 @@ Each control is a large, glowing circular button with subtle staggered animation
 
 Button 4 – Automate
 -------------------
+
+<img width="1886" height="1323" alt="image" src="https://github.com/user-attachments/assets/0adf3577-c0f0-4145-a2dc-022387538145" />
 
 ### Purpose
 
