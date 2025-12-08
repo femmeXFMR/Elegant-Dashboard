@@ -755,5 +755,102 @@ This file uses the following custom cards / integrations:
 Make sure they are installed (e.g. via HACS) and added to your Lovelace `resources:` configuration.
 
 ---
+---
+
+## SURVEILLANCE CARD
+
+This card defines a glassmorphic **surveillance overview panel** that shows:
+
+- A header row with:
+  - **“Surveillance”** label
+  - Animated **Active Stream status text**: `Cameras Actively Streaming`
+  - A round **arm/disarm button** that blinks red when active
+- A main camera row:
+  - **Entry camera snapshot** (left)
+  - **Outdoor live stream** (right)
+- A 4-tile grid of **indoor cameras** that:
+  - Show **snapshots** when idle
+  - Show live feed on tap when surveillance is armed
+
+All entity IDs below are **anonymised** for safety of publishing. Replace them with your own entities when adapting this card.
+
+---
+
+### Required Entities
+
+#### Surveillance Control
+
+- **Trigger / Arm Boolean**
+  - `input_boolean.surveillance_trigger`
+- **Arm Script**
+  - `script.surveillance_arm_live` – starts / arms your live RTSP streaming
+
+#### Entry / Door Camera
+
+- **Snapshot**
+  - `camera.cam_entry_1_snapshot`
+- **Live view**
+  - `camera.cam_entry_1_live`
+
+#### Outdoor Camera
+
+- **Live view**
+  - `camera.cam_outdoor_1_live`
+
+#### Indoor Camera 1
+
+- **Snapshot**
+  - `camera.cam_indoor_1_snapshot`
+- **Live view**
+  - `camera.cam_indoor_1_live`
+
+#### Indoor Camera 2
+
+- **Snapshot**
+  - `camera.cam_indoor_2_snapshot`
+- **Live view**
+  - `camera.cam_indoor_2_live`
+
+#### Indoor Camera 3
+
+- **Snapshot**
+  - `camera.cam_indoor_3_snapshot`
+- **Live view**
+  - `camera.cam_indoor_3_live`
+
+#### Indoor Camera 4
+
+- **Snapshot**
+  - `camera.cam_indoor_4_snapshot`
+- **Live view**
+  - `camera.cam_indoor_4_live`
+
+Each indoor tile uses `input_boolean.surveillance_trigger` via `state-switch`:
+
+- `"off"` → show snapshot only  
+- `"on"` → snapshot with **tap to open live** target
+
+---
+
+### Dependencies
+
+You’ll need the following custom cards / integrations:
+
+- **Custom cards**
+  - [`custom:mod-card`](https://github.com/thomasloven/lovelace-layout-card)
+  - [`custom:button-card`](https://github.com/custom-cards/button-card)
+  - [`custom:layout-card`](https://github.com/thomasloven/lovelace-layout-card)
+  - [`custom:state-switch`](https://github.com/thomasloven/lovelace-state-switch)
+  - [`custom:card-mod`](https://github.com/thomasloven/lovelace-card-mod)
+
+- **Core Lovelace cards**
+  - `picture-entity`
+  - `vertical-stack`
+  - `horizontal-stack`
+
+Make sure these are installed (typically via HACS) and added to your Lovelace `resources:`.
+
+---
+---
 
 
