@@ -853,4 +853,122 @@ Make sure these are installed (typically via HACS) and added to your Lovelace `r
 ---
 ---
 
+### HOUSEKEEPERS CARD
+
+This card defines a glassmorphic **“House Keepers”** panel for three robots (e.g. lawn mower + two vacuums). It shows:
+
+- A **title row**:
+  - “House Keepers” label
+  - A **scrolling status line** driven by a sensor (e.g. next runs, battery, areas)
+  - Subtle title animation when any robot has left the dock or is returning
+- A **three-column robot row**:
+  - Large robot artwork (one per robot)
+  - Under each image: a trio of **round controls**:
+    - **Play** (start / resume)
+    - **Pause** (pause / play-pause icon)
+    - **Home** (send back to dock / returning state)
+
+Each robot uses an `active`, `paused`, and `returning` boolean to control both UI animation and whatever automations you wire up behind them.
+
+All entity IDs below are **anonymised** and safe to publish. Replace them with your own helpers/scripts in your setup.
+
+---
+
+### Required Entities
+
+#### Shared Status / Header
+
+- **Status sensor**
+  - `sensor.housekeepers_status`  
+    Used for the scrolling status line (e.g. “Lawn mower due at 10:30 • Upstairs vac cleaning bedrooms…”).
+
+- **Activity flags**
+  - `input_boolean.hk1_active`
+  - `input_boolean.hk2_active`
+  - `input_boolean.hk3_active`
+  - `input_boolean.hk1_returning`
+  - `input_boolean.hk2_returning`
+  - `input_boolean.hk3_returning`
+
+The header animation checks whether **any** robot is active or returning and slides the title + status line accordingly.
+
+---
+
+### Housekeeper 1 (e.g. Lawn Mower)
+
+- **Booleans**
+  - `input_boolean.hk1_active` – robot is running / away from dock
+  - `input_boolean.hk1_paused` – paused vs playing (for icon swap)
+  - `input_boolean.hk1_returning` – returning to dock
+
+- **Behaviour**
+  - **Play button** → `input_boolean.hk1_active` turned on
+  - **Pause button** → toggles `input_boolean.hk1_paused`
+  - **Home button** → turns on `input_boolean.hk1_returning`
+
+- **Extras**
+  - **App launch** (optional, via Fully Kiosk):  
+    `fully.startApplication('com.eco.global.app')`
+
+---
+
+### Housekeeper 2 (e.g. Downstairs Vacuum)
+
+- **Booleans**
+  - `input_boolean.hk2_active`
+  - `input_boolean.hk2_paused`
+  - `input_boolean.hk2_returning`
+
+- **Script**
+  - `script.hk2_stop_and_reset_ui` – example script to stop the robot and reset UI flags
+
+- **Behaviour**
+  - **Play button** → turns on `input_boolean.hk2_active`
+  - **Pause button** → toggles `input_boolean.hk2_paused`
+  - **Home button** → calls `script.hk2_stop_and_reset_ui`
+
+- **Extras**
+  - App launch example: `fully.startApplication('com.eufylife.smarthome')`
+
+---
+
+### Housekeeper 3 (e.g. Upstairs Vacuum)
+
+- **Booleans**
+  - `input_boolean.hk3_active`
+  - `input_boolean.hk3_paused`
+  - `input_boolean.hk3_returning`
+
+- **Behaviour**
+  - **Play button** → turns on `input_boolean.hk3_active`
+  - **Pause button** → toggles `input_boolean.hk3_paused`
+  - **Home button** → turns on `input_boolean.hk3_returning`
+
+- **Extras**
+  - App launch example: `fully.startApplication('com.dreame.smartlife')`
+
+---
+
+### Dependencies
+
+You’ll need:
+
+- **Custom cards**
+  - [`custom:mod-card`](https://github.com/thomasloven/lovelace-card-mod)
+  - [`custom:button-card`](https://github.com/custom-cards/button-card)
+  - [`custom:card-mod`](https://github.com/thomasloven/lovelace-card-mod)
+
+- **Core Lovelace cards**
+  - `vertical-stack`
+  - `horizontal-stack`
+
+- **Optional**
+  - **Fully Kiosk Browser** (for `fully.startApplication(...)` app-launch actions on wall tablets)
+
+Make sure the custom cards are installed (often via HACS) and added to your Lovelace `resources:`.
+
+---
+---
+
+
 
