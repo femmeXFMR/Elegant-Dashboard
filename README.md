@@ -100,6 +100,8 @@ To use this:
 
 ### ENERGY CARD
 
+<img width="560" height="169" alt="image" src="https://github.com/user-attachments/assets/3013eb69-1f4d-4fda-a3ac-5c3855336338" />
+
 **Purpose**
 
 A glassmorphic energy summary card showing:
@@ -163,6 +165,7 @@ Electricity + gas cost sensors:
 ---
 
 ### MEDIA CENTRE CARD
+<img width="562" height="285" alt="image" src="https://github.com/user-attachments/assets/a31254cf-d2b3-4913-9197-4897d4ca8374" />
 
 **Purpose**
 
