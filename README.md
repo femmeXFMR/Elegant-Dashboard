@@ -92,7 +92,8 @@ To use this:
 - The rain bar uses a glassmorphic gradient with a small 💧 icon and percentage label, and animates in a short time after page load.
 - The 12-hour chart is an inline SVG rendered inside a `custom:button-card` using the first 12 entries of `sensor.tomorrow_raw_hourly.attributes.timelines.hourly`.
 
-
+---
+---
 
 ### ENERGY CARD
 
