@@ -201,7 +201,7 @@ Install via HACS (or equivalent):
   - The clock-weather card uses a few *template sensors* and one *REST sensor* for Tomorrow.io.
   - Add these to `configuration.yaml` (or your preferred split YAML files).
 
-    - Template Sensors (Sun, Moon, Weather)
+    - Template Sensors (Sun, Moon, Weather) - The three moon template sensors are required for the clock-weather card’s night-time moon animation.
       ```yaml
       template: 
         - sensor:
