@@ -194,7 +194,7 @@ Install via HACS (or equivalent):
   - Fill icons for the 5-day forecast:
     - `/local/weather-icons/weather-icons-master/design/fill/animation-ready/<icon>.svg`
 
-_You can use any icon set as long as you update the paths in the JavaScript blocks as appropriate to your setup._
+  _You can use any icon set as long as you update the paths in the JavaScript blocks as appropriate to your setup._
 
 - 🧠 Backend Setup (Required)
 
