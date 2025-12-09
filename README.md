@@ -95,7 +95,8 @@ Most UI elements rely on:
 - **card-mod**  v3.4.5
 - **slider-entity-row**  v17.4.1
 - **state-switch**  v1.9.6
-- **bubble card**  v3.0.4 
+- **bubble card**  v3.0.4
+- **mini-graph-card**  v0.13.0
 - **thermostat-card** (HA native)  
 
 Make sure these are installed before attempting to use any examples.
