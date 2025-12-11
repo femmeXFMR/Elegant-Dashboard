@@ -2,9 +2,8 @@
 
 ![Screenshot_20251208_223111_Fully Kiosk Browser](https://github.com/user-attachments/assets/0ee04375-9042-4334-9e10-87b6ade4f304)
 
-<a href="https://youtu.be/XUM2vB1NydU">
-  <img src="https://img.youtube.com/vi/XUM2vB1NydU/maxresdefault.jpg">
-</a>
+[![Video Preview](https://ytcards.demolab.com/?id=XUM2vB1NydU&title=Watch+the+video&lang=en)](https://youtu.be/XUM2vB1NydU)
+
 
 
 
