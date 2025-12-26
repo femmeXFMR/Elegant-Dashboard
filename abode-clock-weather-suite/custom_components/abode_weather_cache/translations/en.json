@@ -1,0 +1,14 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Abode Weather Cache",
+        "description": "Pick a weather entity and refresh interval.",
+        "data": {
+          "weather_entity": "Weather entity",
+          "scan_interval": "Refresh interval (minutes)"
+        }
+      }
+    }
+  }
+}
