@@ -43,7 +43,7 @@ This creates `sensor.abode_weather_cache` with hourly and daily forecast attribu
 1. Go to **Settings** → **Dashboards** → **Resources**
 2. Click **Add Resource** (bottom right)
 3. Configure:
-   - **URL**: `/hacsfiles/abode-clock-weather-suite/abode-clock-weather-card/abode-clock-weather-card.js`
+   - **URL**: `/hacsfiles/elegant-dashboard/abode-clock-weather-card/abode-clock-weather-card.js`
    - **Resource Type**: **JavaScript Module**
 4. Click **Create**
 

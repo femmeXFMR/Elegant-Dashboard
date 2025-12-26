@@ -31,7 +31,7 @@ This creates a sensor entity: `sensor.abode_weather_cache` with attributes:
 2. Click **Add Resource** (bottom right)
 3. Configure:
    - **URL**: 
-     - If using HACS: `/hacsfiles/abode-clock-weather-suite/abode-clock-weather-card/abode-clock-weather-card.js`
+     - If using HACS: `/hacsfiles/elegant-dashboard/abode-clock-weather-card/abode-clock-weather-card.js`
      - If manual install: `/local/abode-clock-weather-card/abode-clock-weather-card.js`
    - **Resource Type**: JavaScript Module
 4. Click **Create**

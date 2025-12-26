@@ -4,5 +4,6 @@
   "homeassistant": "2024.6.0",
   "render_readme": true,
   "zip_release": false,
-  "filename": "abode-clock-weather-suite/README.md"
+  "filename": "abode-clock-weather-suite/README.md",
+  "content_in_root": false
 }
