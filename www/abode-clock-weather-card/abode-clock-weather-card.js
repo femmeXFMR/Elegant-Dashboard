@@ -423,13 +423,20 @@ export class AbodeClockWeatherCard extends LitElement {
       },
     };
   }
+
+  static getConfigElement() {
+    return document.createElement("abode-clock-weather-card-editor");
+  }
 }
 
 customElements.define("abode-clock-weather-card", AbodeClockWeatherCard);
 
+// Register with Home Assistant card picker
 window.customCards = window.customCards || [];
 window.customCards.push({
   type: "abode-clock-weather-card",
   name: "Abode Clock Weather Card",
   description: "Clock + simplified weather, backed by a forecast cache sensor.",
+  preview: true,
+  documentationURL: "https://github.com/femmeXFMR/Elegant-Dashboard",
 });

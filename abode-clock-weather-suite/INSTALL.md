@@ -1,18 +1,16 @@
-# Installation Guide
+# Installation Guide - Clock + Weather Card
 
-## Step 1: Push to GitHub
+## ⚠️ IMPORTANT: Two-Step Installation Required
 
-First, create a GitHub repository and push this code:
+This card requires **TWO separate steps**:
+1. Install the **integration** (for forecast caching)
+2. Add the **card resource** (so the card appears in the picker)
 
-```bash
-# If you haven't created the repo on GitHub yet, do that first
-# Then add the remote:
-git remote add origin https://github.com/YOURUSERNAME/YOUR-REPO-NAME.git
-git branch -M main
-git push -u origin main
-```
+**The card will NOT show up until BOTH steps are complete!**
 
-## Step 2: Install via HACS
+---
+
+## Step 1: Install Integration via HACS
 
 1. Open Home Assistant
 2. Go to **HACS** (in the sidebar)
@@ -20,14 +18,14 @@ git push -u origin main
 4. Click the three dots menu (⋮) in the top right
 5. Select **Custom repositories**
 6. Click **Add** and enter:
-   - **Repository**: `https://github.com/YOURUSERNAME/YOUR-REPO-NAME`
+   - **Repository**: `https://github.com/femmeXFMR/Elegant-Dashboard`
    - **Category**: **Integration**
 7. Click **Add**
 8. Search for **Abode Clock Weather Suite** or **Abode Weather Cache**
 9. Click **Install**
 10. **Restart Home Assistant**
 
-## Step 3: Configure the Integration
+## Step 2: Configure the Integration
 
 1. Go to **Settings** → **Devices & Services**
 2. Click **Add Integration** (bottom right)
@@ -38,7 +36,9 @@ git push -u origin main
 
 This creates `sensor.abode_weather_cache` with hourly and daily forecast attributes.
 
-## Step 4: Add the Card Resource
+## Step 3: Add the Card Resource (REQUIRED!)
+
+**This step is critical - the card won't appear without it!**
 
 1. Go to **Settings** → **Dashboards** → **Resources**
 2. Click **Add Resource** (bottom right)
@@ -46,14 +46,20 @@ This creates `sensor.abode_weather_cache` with hourly and daily forecast attribu
    - **URL**: `/hacsfiles/elegant-dashboard/abode-clock-weather-card/abode-clock-weather-card.js`
    - **Resource Type**: **JavaScript Module**
 4. Click **Create**
+5. **Refresh your browser** (Ctrl+F5 or Cmd+Shift+R)
 
-## Step 5: Add the Card to Your Dashboard
+**If the path doesn't work, check what HACS created:**
+- Look in your `config/www/` folder
+- Find the folder HACS created (might be `elegant-dashboard` or `Elegant-Dashboard`)
+- Use that folder name in the path
+
+## Step 4: Add the Card to Your Dashboard
 
 ### Via UI Editor
 
 1. Edit your dashboard
 2. Click **Add Card**
-3. Search for **Abode Clock Weather Card**
+3. **Search for "Abode Clock Weather Card"** - it should now appear!
 4. Configure:
    - **Weather Entity**: Select your weather entity
    - **Cache Entity**: `sensor.abode_weather_cache` (default)
@@ -77,30 +83,56 @@ hourly_chart: true
 
 ## Troubleshooting
 
-### Integration not showing in HACS
+### Card doesn't show up in picker
 
-- Make sure you added it as an **Integration** (not Frontend)
-- Check that `hacs.json` is in the root of the repository
-- Verify the repository is public (or you have HACS configured for private repos)
+1. **Did you add the resource?** (Step 3 above) - This is REQUIRED!
+2. **Did you refresh your browser?** - Hard refresh (Ctrl+F5)
+3. **Check browser console** (F12 → Console) for errors
+4. **Verify the resource path:**
+   - Go to Settings → Dashboards → Resources
+   - Check if the resource is listed and shows "Loaded"
+   - If it shows an error, the path might be wrong
 
-### Card resource not loading
+### Resource path doesn't work
 
-- Verify the resource URL is correct
-- Check browser console for errors (F12 → Console)
-- Ensure the card file exists at the path
+HACS might create the folder with a different name. To find it:
+
+1. SSH into your Home Assistant (or use File Editor addon)
+2. Navigate to `config/www/`
+3. Look for a folder created by HACS (might be `elegant-dashboard`, `Elegant-Dashboard`, or similar)
+4. Update the resource URL to match: `/hacsfiles/<actual-folder-name>/abode-clock-weather-card/abode-clock-weather-card.js`
+
+### Integration installed but no sensor
+
+1. Check that you configured the integration (Step 2)
+2. Go to Settings → Devices & Services
+3. Look for "Abode Weather Cache" - is it listed?
+4. If not, add it via "Add Integration"
+5. Check Home Assistant logs for errors
 
 ### Forecasts not showing
 
-- Check that `sensor.abode_weather_cache` exists
-- Verify it has `hourly` and `daily` attributes
-- Check Home Assistant logs: **Settings** → **System** → **Logs**
+1. Verify `sensor.abode_weather_cache` exists
+2. Check its attributes - do you see `hourly` and `daily`?
+3. Check Home Assistant logs: Settings → System → Logs
+4. Verify your weather entity is working
 
-### Sun arc not showing
+## Quick Checklist
 
-- Ensure `sun.sun` entity exists (usually automatic)
-- Check that it has `next_rising` and `next_setting` attributes
+- [ ] Integration installed via HACS
+- [ ] Home Assistant restarted
+- [ ] Integration configured (sensor created)
+- [ ] Card resource added in Resources
+- [ ] Browser refreshed
+- [ ] Card appears in card picker
 
-## Next Steps
+## Still Having Issues?
 
-See the [full documentation](docs/clock-weather-card.md) for advanced configuration options, greeting setup, and more examples.
+1. Check the browser console (F12) for JavaScript errors
+2. Verify the card file exists at the resource path
+3. Make sure you're using the correct resource type (JavaScript Module)
+4. Try clearing browser cache
 
+---
+
+**Remember: The card resource MUST be added manually - HACS doesn't do this automatically for integrations!**
