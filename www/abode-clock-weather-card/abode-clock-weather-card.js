@@ -423,10 +423,6 @@ export class AbodeClockWeatherCard extends LitElement {
       },
     };
   }
-
-  static getConfigElement() {
-    return document.createElement("abode-clock-weather-card-editor");
-  }
 }
 
 customElements.define("abode-clock-weather-card", AbodeClockWeatherCard);
